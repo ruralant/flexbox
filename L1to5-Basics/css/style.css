@@ -37,11 +37,11 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
   height:100vh;
 
 
-  /*FLEX WRAP*/
-  /*flex-wrap: nowrap;      Default ::-ms-value */
+  /* FLEX WRAP*/
+  /* flex-wrap: nowrap;      Default ::-ms-value */
   flex-wrap: wrap;
-  /*it will work with WIDTH and will float the items*/
-  /*flex-wrap: wrap-reverse      The item will still start from the left but from the bottom*/
+  /* it will work with WIDTH and will float the items*/
+  /* flex-wrap: wrap-reverse      The item will still start from the left but from the bottom*/
   
 
   /* FLEX-DIRECTION */
@@ -54,7 +54,18 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 /*select the FLEX ITEMS*/
 .box {
+  /* this will take all the width of the page */
+  flex: 1;
+  /* everything inside .box has order 1 instead of 0 */
+  order: 1;
   /* remember that you can use calculations! */
   width: calc(33.3333333% - 20px);
   margin: 10px;
+}
+
+.box3 {
+  /* order a particular element. standard is 0 */
+  order: 5;
+  /* works negative */
+  /*order: -1;*/
 }
